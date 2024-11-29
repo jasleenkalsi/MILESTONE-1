@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f3ec78, #af4261);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Styles */
+main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styles */
+header {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 5px solid #ffcc00;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label Styles */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input and Textarea Styles */
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+    background: #fffdf0;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.7);
+}
+
+/* Button Styles */
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #004080;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #00509e;
+    box-shadow: 0 4px 8px rgba(0, 80, 158, 0.5);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    font-size: 12px;
+    position: relative;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    form {
+        gap: 10px;
+    }
+}
