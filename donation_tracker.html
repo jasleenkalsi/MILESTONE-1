@@ -3,49 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation Tracker</title>
+    <title>Donation Tracker | PiXELL River Financial</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="donation_tracker.js"></script>
+    <script defer src="donation_tracker.js"></script>
 </head>
 <body>
 
     <!-- Header -->
-    <header>
-        <h1>PiXELL River Financial</h1>
-        <p>Community Support Tracker: Donation Tracker</p>
+    <header class="main-header">
+        <div class="container">
+            <h1>PiXELL River Financial</h1>
+            <p>Your trusted partner in community support.</p>
+        </div>
     </header>
 
     <!-- Main Content -->
-    <main>
-        <h2>Track Your Donations</h2>
-        <p>Fill out the form below to record your donation details. This helps us monitor our community impact.</p>
-        
-        <form id="donation-form">
-            <!-- Charity Name -->
-            <label for="charity-name">Charity Name:</label>
-            <input type="text" id="charity-name" name="charity-name" placeholder="Enter the charity name" required>
+    <main class="main-content container">
+        <section class="donation-form-section">
+            <h2>Track Your Donations</h2>
+            <p>Fill out the form below to record your donation details. Help us monitor our community impact and keep track of your contributions.</p>
             
-            <!-- Donation Amount -->
-            <label for="donation-amount">Donation Amount ($):</label>
-            <input type="number" id="donation-amount" name="donation-amount" placeholder="Enter the amount" min="1" required>
-            
-            <!-- Donation Date -->
-            <label for="donation-date">Date of Donation:</label>
-            <input type="date" id="donation-date" name="donation-date" required>
-            
-            <!-- Donor Comment -->
-            <label for="donor-comment">Donor Comment/Message:</label>
-            <textarea id="donor-comment" name="donor-comment" rows="4" placeholder="Optional: Add a message"></textarea>
-            
-            <!-- Submit Button -->
-            <button type="submit">Submit Donation</button>
-        </form>
+            <form id="donation-form" aria-label="Donation Form">
+                <!-- Charity Name -->
+                <div class="form-group">
+                    <label for="charity-name">Charity Name:</label>
+                    <input 
+                        type="text" 
+                        id="charity-name" 
+                        name="charity-name" 
+                        placeholder="Enter the charity name" 
+                        required 
+                        aria-required="true">
+                </div>
+                
+                <!-- Donation Amount -->
+                <div class="form-group">
+                    <label for="donation-amount">Donation Amount ($):</label>
+                    <input 
+                        type="number" 
+                        id="donation-amount" 
+                        name="donation-amount" 
+                        placeholder="Enter the amount" 
+                        min="1" 
+                        required 
+                        aria-required="true">
+                </div>
+                
+                <!-- Donation Date -->
+                <div class="form-group">
+                    <label for="donation-date">Date of Donation:</label>
+                    <input 
+                        type="date" 
+                        id="donation-date" 
+                        name="donation-date" 
+                        required 
+                        aria-required="true">
+                </div>
+                
+                <!-- Donor Comment -->
+                <div class="form-group">
+                    <label for="donor-comment">Donor Comment/Message:</label>
+                    <textarea 
+                        id="donor-comment" 
+                        name="donor-comment" 
+                        rows="4" 
+                        placeholder="Optional: Add a message"></textarea>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn-submit">Submit Donation</button>
+            </form>
+        </section>
+
+        <!-- Donations Table -->
+        <section class="donation-table-section">
+            <h2>Donation Records</h2>
+            <p>Below is a record of your donations. You can review, edit, or delete your entries.</p>
+            <table id="donationTable" class="donation-table">
+                <thead>
+                    <tr>
+                        <th>Charity Name</th>
+                        <th>Amount ($)</th>
+                        <th>Date</th>
+                        <th>Comment</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+            <div id="summary" class="summary">
+                Total Donations: $0.00
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 PiXELL River Financial. All rights reserved.</p>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 PiXELL River Financial. All rights reserved.</p>
+            <p>Designed to empower communities one donation at a time.</p>
+        </div>
     </footer>
 
 </body>
 </html>
+
